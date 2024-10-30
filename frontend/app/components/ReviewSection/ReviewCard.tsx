@@ -1,5 +1,5 @@
 import React from "react";
-import ProgressBar from "./ProgressBar";
+import ProgressBar from "../Shared/ProgressBar";
 import ReviewStarBar from "./ReviewStarBar";
 import { MdStar } from "react-icons/md";
 
