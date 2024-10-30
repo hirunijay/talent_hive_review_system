@@ -6,16 +6,16 @@ import { MdStar } from "react-icons/md";
 function ReviewCard() {
   return (
     <div className="border-none rounded-md w-1/4 mx-11 my-8 p-3">
-      <div className=" flex flex-row items-center gap-2 title text-2xl font-semibold mb-3">
-        <MdStar size={24} />
-        4.7 ratings (18756)
+      <div className=" flex flex-row items-center gap-2 text-gray-800 text-2xl font-semibold">
+        <MdStar size={24} color="#2228C3" />
+        4.7 review (18756)
       </div>
-      <div className="px-3 pb-3">
+      <div className="px-3 py-4">
         {[...Array(5)].map((_, index) => (
           <div className="flex flex-row items-center gap-2 mb-2" key={index}>
             <ProgressBar progress={25} />
             <ReviewStarBar score={5 - index} />
-            <span>25%</span>
+            <span className="text-gray-500">25%</span>
           </div>
         ))}
       </div>

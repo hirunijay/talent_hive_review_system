@@ -33,7 +33,7 @@ function Navbar() {
             <Link
               href={item?.path}
               key={index}
-              className="text-blue-800 text-lg font-normal"
+              className="text-themeblue-dark text-lg font-normal"
             >
               {item?.text}
             </Link>

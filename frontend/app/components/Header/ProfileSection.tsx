@@ -8,7 +8,7 @@ function ProfileSection() {
         <span className="block font-normal leading-none">Hiruni</span>
         <span className="text-sm text-gray-500">Vendor</span>
       </div>
-      <div className="flex justify-center items-center rounded-full bg-gray-200 p-1 w-10 h-10 bg-[rgb(198, 199, 236)">
+      <div className="flex justify-center items-center rounded-full p-1 w-10 h-10 bg-themeblue-light">
         <MdPerson size={20} color="rgb(34, 40, 195)" />
       </div>
     </div>

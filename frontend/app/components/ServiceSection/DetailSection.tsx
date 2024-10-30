@@ -12,7 +12,7 @@ function DetailSection() {
   ];
   return (
     <div className="flex flex-col gap-5">
-      <h2 className="text-[36px] font-normal text-gray-600">
+      <h2 className="text-[36px] font-normal text-themegray-dark">
         Full Stack Developer | Web Development
       </h2>
       <div className="flex flex-row gap-12">
@@ -31,10 +31,12 @@ function DetailSection() {
         </div>
         <div>
           <p className="text-gray-400">Offered by</p>
-          <span className="font-normal text-gray-600 text-xl">Francesco</span>
+          <span className="font-normal text-themegray-dark text-xl">
+            Francesco
+          </span>
         </div>
       </div>
-      <p className="mt-2 text-gray-700">
+      <p className="mt-2 text-themegray-dark">
         Hi! I develop user-friendly web applications with intuitive and creative
         solutions. Book a call and let's talk!
       </p>

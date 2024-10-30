@@ -11,6 +11,15 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        themeblue: {
+          dark: "#2228C3",
+          light: "#C6C7EC",
+        },
+        themegray: {
+          dark: "#32383E",
+          default: "#AAAAAA",
+          light: "#EEEEEE",
+        },
       },
       fontFamily: {
         ubuntu: ["Ubuntu", "Inter", "sans-serif"],

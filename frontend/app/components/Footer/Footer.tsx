@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="w-full flex items-center justify-center flex-col gap-8 h-40 bg-[#EEEEEE]">
+    <div className="w-full flex items-center justify-center flex-col gap-8 h-40 bg-themegray-light">
       <div className="flex justify-center text-blue-800 gap-6">
         <div>Booking</div>
         <div>Spaces</div>

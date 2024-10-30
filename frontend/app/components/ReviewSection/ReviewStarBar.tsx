@@ -10,7 +10,11 @@ function ReviewStarBar({ score = 0 }: ReviewStarBarProps) {
   return (
     <div className="flex flex-row">
       {[...Array(5)].map((_, index) =>
-        index < score ? <MdStar key={index} /> : <MdStarBorder key={index} />
+        index < score ? (
+          <MdStar size={20} key={index} color="#2228C3" />
+        ) : (
+          <MdStarBorder size={20} key={index} color="#2228C3" />
+        )
       )}
     </div>
   );
