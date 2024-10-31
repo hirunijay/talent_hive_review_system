@@ -7,7 +7,7 @@ function CommentSection() {
       {[...Array(5)].map((_, index) => (
         <div>
           <CommentCard key={index} />
-          <hr />
+          <hr className="mt-1 mb-6" />
         </div>
       ))}
     </div>
