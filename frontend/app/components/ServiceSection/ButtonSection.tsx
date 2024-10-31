@@ -9,12 +9,12 @@ function ButtonSection() {
       <div className="flex flex-row items-center gap-4">
         <MdOutlineQrCode size={24} color="rgb(34 40 195)" />
         <button className="bg-themeblue-dark gap-2 text-white rounded-md font-medium px-4 py-2 flex flex-row items-center justify-center">
-          <FaRegBookmark size={18} />
+          <FaRegBookmark size={15} />
           Book
         </button>
       </div>
       <button className="bg-themeblue-dark gap-2 text-white rounded-md font-medium px-4 py-2 flex flex-row items-center justify-center">
-        <MdOutlineReviews size={20} />
+        <MdOutlineReviews size={16} />
         Add Review
       </button>
     </div>

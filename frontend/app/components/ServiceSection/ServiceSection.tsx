@@ -6,7 +6,7 @@ import ButtonSection from "./ButtonSection";
 
 function ServiceSection() {
   return (
-    <div className="flex items-start justify-between px-10 pt-28 pb-9">
+    <div className="flex items-start flex-wrap justify-between px-10 pt-28 pb-9">
       <div
         className="flex flex-row gap-10
       "

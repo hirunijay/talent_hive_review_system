@@ -5,7 +5,7 @@ import { MdStar } from "react-icons/md";
 
 function ReviewCard() {
   return (
-    <div className="border-none rounded-md w-1/4 mx-11 my-8 p-3">
+    <div className="border-none rounded-md w-1/4 p-3">
       <div className=" flex flex-row items-center gap-2 text-gray-800 text-2xl font-semibold">
         <MdStar size={24} color="#2228C3" />
         4.7 review (18756)
