@@ -1,19 +1,42 @@
 "use client";
-import React, { useCallback, useEffect, useState, UIEvent } from "react";
+import React, { useEffect, useState, UIEvent, useRef } from "react";
 import CommentCard from "./CommentCard";
 
 function CommentSection() {
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [prevScrollPosition, setPrevScrollPosition] = useState(0);
 
+  const [isScrollingUp, setIsScrollingUp] = useState(1);
+  const [isScrollingDown, setIsScrollingDown] = useState(0);
+
+  // const handleScroll = (e: UIEvent<HTMLDivElement>) => {
+  //   const target = e.target as HTMLDivElement;
+  //   const { scrollTop, scrollHeight, clientHeight } = target;
+  //   const position = Math.ceil(
+  //     (scrollTop / (scrollHeight - clientHeight)) * 100
+  //   );
+  //   setScrollPosition(position);
+  // };
+
+  // blur effect when scrolling
   const handleScroll = (e: UIEvent<HTMLDivElement>) => {
-    const target = e.target as HTMLDivElement;
-    const { scrollTop, scrollHeight, clientHeight } = target;
-    const position = Math.ceil(
-      (scrollTop / (scrollHeight - clientHeight)) * 100
-    );
-    console.log(position);
-    setScrollPosition(position);
+    const currentScroll = e.currentTarget.scrollTop;
+    setPrevScrollPosition(scrollPosition);
+    setScrollPosition(currentScroll);
   };
+
+  useEffect(() => {
+    // detect whether scrolling up or down
+    if (scrollPosition > prevScrollPosition) {
+      console.log("Scrolling down");
+      setIsScrollingUp(0);
+      setIsScrollingDown(1);
+    } else {
+      console.log("Scrolling up");
+      setIsScrollingUp(1);
+      setIsScrollingDown(0);
+    }
+  }, [scrollPosition]);
 
   return (
     <div
@@ -22,9 +45,7 @@ function CommentSection() {
     >
       <div
         style={{
-          background: `linear-gradient(to bottom, rgba(255,255,255,${
-            scrollPosition / 100
-          }), transparent)`,
+          background: `linear-gradient(to bottom, rgba(255,255,255,${isScrollingDown}), transparent)`,
         }}
         className={`sticky z-40 h-1/4 w-full -mt-[11%] top-0 right-0`}
       ></div>
@@ -34,7 +55,12 @@ function CommentSection() {
           <hr className="mt-1 mb-6" />
         </div>
       ))}
-      <div className="sticky z-40 h-1/4 w-full bg-gradient-to-t from-white to-transparent -mt-[11%] bottom-0 right-0"></div>
+      <div
+        style={{
+          background: `linear-gradient(to top, rgba(255,255,255,${isScrollingUp}), transparent)`,
+        }}
+        className="sticky z-40 h-1/4 w-full -mt-[11%] bottom-0 right-0"
+      ></div>
     </div>
   );
 }
