@@ -2,6 +2,7 @@ import React from "react";
 import { MdThumbUp, MdThumbDown, MdMoreVert } from "react-icons/md";
 import ReviewStarBar from "./ReviewStarBar";
 import UserAvatar from "../Shared/UserAvatar";
+import Popover from "../Shared/Popover";
 
 function CommentCard() {
   return (
@@ -12,7 +13,11 @@ function CommentCard() {
           <h3 className="text-sm font-semibold">Mihály A.</h3>
           <p className="text-sm font-normal">Vendor</p>
         </div>
-        <MdMoreVert size={18} className="ml-auto cursor-pointer" />
+        <div className="ml-auto cursor-pointer">
+          <Popover content={<div className="w-32">Report Review</div>}>
+            <MdMoreVert size={18} />
+          </Popover>
+        </div>
       </div>
       <div className="flex flex-row items-center gap-2 mb-3">
         <ReviewStarBar score={5} size={16} />
