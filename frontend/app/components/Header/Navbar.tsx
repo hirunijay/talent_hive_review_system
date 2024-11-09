@@ -23,7 +23,7 @@ function Navbar() {
     },
   ];
   return (
-    <div className="flex fixed z-50 w-full items-center justify-between px-11 py-3 bg-white shadow">
+    <div className="flex fixed z-40 w-full items-center justify-between px-11 py-3 bg-white shadow">
       <div className="flex items-center justify-start gap-8">
         <div className="flex items-center space-x-2 text-lg">
           <p>Talent Hive Logo</p>

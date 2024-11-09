@@ -2,18 +2,12 @@
 import { useEffect, useRef, useState } from "react";
 
 type PopoverProps = {
-  children?: React.ReactNode;
+  children: React.ReactNode;
   content?: React.ReactNode;
   trigger?: any;
-  styles?: string;
 };
 
-function Popover({
-  children,
-  content,
-  styles,
-  trigger = "click",
-}: PopoverProps) {
+function Popover({ children, content, trigger = "click" }: PopoverProps) {
   const [show, setShow] = useState(false);
 
   const handleMouseOver = () => {

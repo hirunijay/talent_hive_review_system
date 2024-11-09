@@ -13,7 +13,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-ubuntu antialiased`}>{children}</body>
+      <body className={`font-ubuntu antialiased`}>
+        {children}
+        <div id="modal-root" />
+      </body>
     </html>
   );
 }

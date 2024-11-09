@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, UIEvent, useRef } from "react";
+import { UIEvent, useEffect, useState } from "react";
 import CommentCard from "./CommentCard";
 
 function CommentSection() {
@@ -42,7 +42,7 @@ function CommentSection() {
     >
       {!isScrollingUp && (
         <div
-          className={`sticky z-40 bg-gradient-to-b from-white to-transparent h-1/4 w-full -mt-[11%] top-0 right-0`}
+          className={`sticky z-30 bg-gradient-to-b from-white to-transparent h-1/4 w-full -mt-[11%] top-0 right-0`}
         ></div>
       )}
       {[...Array(5)].map((_, index) => (
@@ -52,7 +52,7 @@ function CommentSection() {
         </div>
       ))}
       {isScrollingUp && (
-        <div className="sticky z-40 bg-gradient-to-t from-white to-transparent h-1/4 w-full -mt-[11%] bottom-0 right-0"></div>
+        <div className="sticky z-30 bg-gradient-to-t from-white to-transparent h-1/4 w-full -mt-[11%] bottom-0 right-0"></div>
       )}
     </div>
   );

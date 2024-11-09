@@ -1,8 +1,11 @@
-import React from "react";
-import Image from "next/image";
-import ImageCard from "./ImageCard";
-import DetailSection from "./DetailSection";
+"use client";
+import { useState } from "react";
+import Modal from "../Shared/Modal";
 import ButtonSection from "./ButtonSection";
+import DetailSection from "./DetailSection";
+import ImageCard from "./ImageCard";
+import Link from "next/link";
+import ModalTrigger from "../Shared/ModalTrigger";
 
 function ServiceSection() {
   return (
@@ -15,6 +18,10 @@ function ServiceSection() {
         <DetailSection />
       </div>
       <ButtonSection />
+
+      <ModalTrigger content={<div>This is a modal</div>}>
+        <button>SUMMON THE MODAL</button>
+      </ModalTrigger>
     </div>
   );
 }
