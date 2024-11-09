@@ -1,3 +1,5 @@
+const Review = require("../models/reviewModel");
+
 exports.createReview = async (reviewData) => {
   const review = new Review(reviewData);
   return await review.save();
@@ -5,5 +7,5 @@ exports.createReview = async (reviewData) => {
 
 // populate the user details when fetching reviews
 exports.getAllReviews = async () => {
-  return await Review.find().populate("userId", "username email");
+  return await Review.find().populate("userId", "username email userType");
 };
